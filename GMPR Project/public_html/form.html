@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Give Me the Password Requirements</title>
+        <link href = "index_stylesheet.css" rel = "stylesheet" type = "text/css" />
+        <script src="index_javaScript.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onLoad="startupBanner()">
+        <div id = "container" >
+            <header>
+                <a href="index.html">
+                    <img id="banner" alt="banner" src="assets/logo4.png" 
+                        width="700" height="225">
+                </a>
+            </header>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href = "index.html" >Homepage</a></td>
+                        <td><a href = "directory.html" >Directory</a></td>
+                        <td><a href = "tester.html" >Password Tester</a></td>
+                        <td><a href = "form.html" >Request Form</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <div id = "main" >
+                <form name="survey">
+                    <h1>Request a Site!</h1>
+                    <h4>Name of the site:</h4>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input name="site" size="50"
+                    type="text"><br>
+                    <h4>Provide any requirements you know offhand:</h4>
+                    <input name="requirements" type="checkbox">Lowercase Letters
+                    <input name="requirements" type="checkbox">Uppercase Letters<br>
+                    <input name="requirements" type="checkbox">Numbers<br>
+                    <p>
+                        <h4>Please enter any comments:</h4>
+                        <textarea name="comments" rows="4" cols="50">Enter Here</textarea>
+                    </p>
+                    <input type="button" value="Submit Order" onclick="doSubmit()">
+                    <input type="button" value="Clear Entries" onclick="doClear()">
+                </form>
+            </div> <!-- end of main div -->
+            <footer>
+            </footer>
+        </div> <!-- end of container div -->
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Give Me the Password Requirements</title>
+        <link href = "../index_stylesheet.css" rel = "stylesheet" type = "text/css" />
+        <script src="../index_javaScript.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onLoad="startupBannerLevel2()">
+        <div id = "container" >
+            <header>
+                <a href="../index.html">
+                    <img id="banner" alt="banner" src="../assets/logo4.png" 
+                        width="700" height="225">
+                </a>
+            </header>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href = "../index.html" >Homepage</a></td>
+                        <td><a href = "../directory.html" >Directory</a></td>
+                        <td><a href = "../tester.html" >Password Tester</a></td>
+                        <td><a href = "../form.html" >Request Form</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <div id = "main" >
+                <h1>Google - Password Requirements</h1>
+                <ul>
+                    <li>Must be 8 characters minimum</li>
+                    <li>The following are acceptable
+                        <ol>
+                            <li>Uppercase and lowercase letters</li>
+                            <li>Numbers</li>
+                            <li>Spaces inside the password are fine</li>
+                        </ol>
+                    </li>
+                </ul>
+                <form name="generator">
+                    <textarea rows="8" cols="50" readonly="" name="display">
+                    Generate passwords
+                    </textarea>
+                </form><br>
+                <input type="button" value="Submit Order" onclick="doSubmitGenerator()">
+                <input type="button" value="Clear Entries" onclick="doClearGenerator()">
+            </div> <!-- end of main div -->
+            <footer>
+            </footer>
+        </div> <!-- end of container div -->
+    </body>
+</html>

@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 26, 2015, 8:16:13 PM
+    Author     : Taylor Johnson
+*/
+
+/* universal */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* body */
+
+body {
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 1.5em;
+        background-color: #FFE066;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* container */
+
+#container {
+	width: 100%;
+	margin: 10px auto;
+}
+
+.center {  /** For centering pesky images **/
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* header */
+
+header {
+	text-align: center;
+}
+
+/* nav */
+
+nav {
+	display: block;
+	margin: 10px 0 10px 0;
+	padding: 5px 0 5px 0;
+	border-top: solid #60562E thick;
+	border-bottom: solid #60562E thick;
+        background-color: white;
+}
+
+nav table {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+nav table tr td a{
+	padding: 0 15px 0 15px;
+	border-left: solid #60562E thin;
+	border-right: solid #60562E thin;
+	text-decoration: none;
+}
+
+/* main */
+
+#main {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main ol {
+	list-style-position: inside;
+}
+
+#main ol li ul li {
+	padding-left: 20px;
+}
+
+/* footer */
+
+/*footer {
+	float: right;
+	clear: right;
+	width: 1000px;
+	padding: 5px;
+	margin-bottom: 20px;
+	border-top: solid black thin;
+	font-size: 0.8em;
+}*/

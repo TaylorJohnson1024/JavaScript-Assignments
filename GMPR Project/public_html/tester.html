@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Give Me the Password Requirements</title>
+        <link href = "index_stylesheet.css" rel = "stylesheet" type = "text/css" />
+        <script src="index_javaScript.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onLoad="startupBanner()">
+        <div id = "container" >
+            <header>
+                <a href="index.html">
+                    <img id="banner" alt="banner" src="assets/logo4.png" 
+                        width="700" height="225">
+                </a>
+            </header>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href = "index.html" >Homepage</a></td>
+                        <td><a href = "directory.html" >Directory</a></td>
+                        <td><a href = "tester.html" >Password Tester</a></td>
+                        <td><a href = "form.html" >Request Form</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <div id = "main" >
+                <h1>Password Tester</h1>
+                <div id="testMain">
+                    <form name="tester">
+                        Minimum Length <input type="text" id="minLength" value="6">
+                        Maximum Length <input type="text" id="maxLength" value="20"><br>
+                        Input Password <input type="text" id="password" value="Testing123"><br>
+                        <input type="button" value="Submit" onclick="doSubmitTester()">
+                        <input type="button" value="Clear" onclick="doClearTester()">
+                    </form>
+                    <img id="testImg1" alt="testImg1" src="assets/fail.png" width="25" height="25">
+                    Password Length
+                    <img id="testImg2" alt="testImg2" src="assets/fail.png" width="25" height="25">
+                    Password has Uppercase Letters<br>
+                    <img id="testImg3" alt="testImg3" src="assets/fail.png" width="25" height="25">
+                    Password has Lowercase Letters
+                    <img id="testImg4" alt="testImg4" src="assets/fail.png" width="25" height="25">
+                    Password has Numbers
+                </div>
+            </div> <!-- end of main div -->
+            <footer>
+            </footer>
+        </div> <!-- end of container div -->
+    </body>
+</html>

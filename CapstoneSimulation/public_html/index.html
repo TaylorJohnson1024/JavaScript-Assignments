@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>The JavaScript Computer Company</title>
+        <script>
+            function doSubmit() //shows a message when the submit button is used
+            {
+                var customer = document.JCCForm.customer.value;
+                var address = document.JCCForm.address.value;
+                var city = document.JCCForm.city.value;
+                var phone = document.JCCForm.phone.value;
+                var email = document.JCCForm.email.value;
+                
+                if (validateText() === false)
+                {
+                    if (customer.length === 0)
+                    {
+                        alert("Need information starting from your name.");
+                        return;
+                    }
+                    else if (address.length === 0)
+                    {
+                        alert("Need information starting from your address.");
+                        return;
+                    }
+                    else if (city.length === 0)
+                    {
+                        alert("Need information starting from your city.");
+                        return;
+                    }
+                    else if (phone.length === 0)
+                    {
+                        alert("Need information starting from your phone.");
+                        return;
+                    }
+                    else if (email.length === 0)
+                    {
+                        alert("Need information starting from your email.");
+                        return;
+                    }
+                }
+                else if (validateRadio() === false)
+                {
+                    if (validateRadioCPU() === false)
+                    {
+                        alert("Please choose a CPU.");
+                        return;
+                    }
+                    else if (validateRadioRAM() === false)
+                    {
+                        alert("Please choose a set of RAM.");
+                        return;
+                    }
+                    else if (validateRadioHDD() === false)
+                    {
+                        alert("Please choose a HDD.");
+                        return;
+                    }
+                }
+                alert("Your JavaScript Computer Company order form has been submitted.");
+                return;
+            }
+            
+            function validateText() //validates text fields in step 1
+            {
+                var customer = document.JCCForm.customer.value;
+                if (customer.length === 0) return false;
+                var address = document.JCCForm.address.value;
+                if (address.length === 0) return false;
+                var city = document.JCCForm.city.value;
+                if (city.length === 0) return false;
+                var phone = document.JCCForm.phone.value;
+                if (phone.length === 0) return false;
+                var email = document.JCCForm.email.value;
+                if (email.length === 0) return false;
+                return true;
+            }
+            
+            function validateRadio()
+            {
+                if (validateRadioCPU() && validateRadioRAM() && validateRadioHDD() === true) return true;
+                return false;
+            }
+            
+            function validateRadioCPU() //validates radio buttons in step 2 CPU
+            {
+                if (document.JCCForm.CPU[0].checked) return true;
+                if (document.JCCForm.CPU[1].checked) return true;
+                if (document.JCCForm.CPU[2].checked) return true;
+                return false;
+            }
+            
+            function validateRadioRAM() //validates radio buttons in step 2 RAM
+            {
+                if (document.JCCForm.RAM[0].checked) return true;
+                if (document.JCCForm.RAM[1].checked) return true;
+                if (document.JCCForm.RAM[2].checked) return true;
+                return false;
+            }
+            
+            function validateRadioHDD() //validates radio buttons in step 2 HDD
+            {
+                if (document.JCCForm.HDD[0].checked) return true;
+                if (document.JCCForm.HDD[1].checked) return true;
+                if (document.JCCForm.HDD[2].checked) return true;
+                return false;
+            }
+            
+            function doClear() //clears all data in the form when the clear button is used
+            {
+                //step 1
+                document.JCCForm.customer.value = "";
+                document.JCCForm.address.value = "";
+                document.JCCForm.city.value = "";
+                document.JCCForm.state.value = "";
+                document.JCCForm.zip.value = "";
+                document.JCCForm.phone.value = "";
+                document.JCCForm.email.value = "";
+                
+                //step 2
+                document.JCCForm.CPU[0].checked = false;
+                document.JCCForm.CPU[1].checked = false;
+                document.JCCForm.CPU[2].checked = false;
+                document.JCCForm.RAM[0].checked = false;
+                document.JCCForm.RAM[1].checked = false;
+                document.JCCForm.RAM[2].checked = false;
+                document.JCCForm.HDD[0].checked = false;
+                document.JCCForm.HDD[1].checked = false;
+                document.JCCForm.HDD[2].checked = false;
+                
+                //step 3
+                document.JCCForm.software[0].checked = false;
+                document.JCCForm.software[1].checked = false;
+                document.JCCForm.software[2].checked = false;
+                return;
+            }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="JCCForm">
+            <h1>The JavaScript Computer Company</h1>
+            <p>
+                <h4>Step 1: Enter your name, address, phone number, and email:</h4>
+                <font face="Courier New">
+                    Name: &nbsp;&nbsp;&nbsp;&nbsp;<input name="customer" size="50"
+                    type="text"><br>
+                    Address: &nbsp;<input name="address" size="50" type="text"><br>
+                    City: &nbsp;&nbsp;&nbsp;&nbsp;<input name="city" size="15" type="text">
+                    State: <input name="state" size="2" type="TEXT">
+                    Zip: <input name="zip" size="5" type="text"><br>
+                    Phone: &nbsp;&nbsp;&nbsp;<input name="phone" size="50" type="text"><br>
+                    Email: &nbsp;&nbsp;&nbsp;<input name="email" size="50" type="text"><br>
+                </font>
+            </p>
+            <p>
+                <h4>Step 2: Select the computer components you want:</h4>
+                <font face="Courier New">
+                    CPU: <input name="CPU" type="radio">Intel 2.0 GHz
+                    <input name="CPU" type="radio">Intel 2.2 GHz
+                    <input name="CPU" type="radio">Intel 3.0 GHz<br>
+                    
+                    RAM: <input name="RAM" type="radio">SIMM 1.0 GB
+                    <input name="RAM" type="radio">SIMM 2.0 GB
+                    <input name="RAM" type="radio">SIMM 4.0 GB<br>
+                    
+                    HDD: <input name="HDD" type="radio">IDE 60 GB
+                    <input name="HDD" type="radio">IDE 120 GB
+                    <input name="HDD" type="radio">IDE 250 GB<br>
+                </font>
+            </p>
+            <p>
+                <h4>Step 3: Select the optional software you want:</h4>
+                <font face="Courier New">
+                    <input name="software" type="checkbox">Adobe Creative Suite 4<br>
+                    <input name="software" type="checkbox">Microsoft Office 2007<br>
+                    <input name="software" type="checkbox">Symantec AntiVirus 2010<br>
+                </font>
+            </p>
+            <input type="button" value="Submit Order" onclick="doSubmit()">
+            <input type="button" value="Clear Entries" onclick="doClear()">
+        </form>
+    </body>
+</html>

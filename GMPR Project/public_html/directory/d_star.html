@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Give Me the Password Requirements</title>
+        <link href = "../index_stylesheet.css" rel = "stylesheet" type = "text/css" />
+        <script src="../index_javaScript.js"></script> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onLoad="startupBannerLevel2()">
+        <div id = "container" >
+            <header>
+                <a href="../index.html">
+                    <img id="banner" alt="banner" src="../assets/logo4.png" 
+                        width="700" height="225">
+                </a>
+            </header>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href = "../index.html" >Homepage</a></td>
+                        <td><a href = "../directory.html" >Directory</a></td>
+                        <td><a href = "../tester.html" >Password Tester</a></td>
+                        <td><a href = "../form.html" >Request Form</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <div id = "main" >
+                <h1>Star ID - Password Requirements</h1>
+                <ul>
+                    <li>Change every 180 days</li>
+                    <li>Between 8 and 128 characters</li>
+                    <li>Use at least 3 of these types of characters: uppercase, 
+                        lowercase, numbers, special characters</li>
+                    <li>May not have been used before</li>
+                    <li>May not contain your first name or last name if they are 
+                        longer than 2 characters</li>
+                </ul>
+                <form name="generator">
+                    <textarea rows="8" cols="50" readonly="" name="display">
+                    Generate passwords
+                    </textarea>
+                </form><br>
+                <input type="button" value="Submit Order" onclick="doSubmitGenerator()">
+                <input type="button" value="Clear Entries" onclick="doClearGenerator()">
+            </div> <!-- end of main div -->
+            <footer>
+            </footer>
+        </div> <!-- end of container div -->
+    </body>
+</html>
